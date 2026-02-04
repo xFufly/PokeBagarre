@@ -11,7 +11,7 @@ repositories {
 }
 
 javafx {
-  version = "11"
+  version = "21"
   modules = ['javafx.controls']
 }
 
@@ -27,8 +27,10 @@ dependencies {
 
 java {
   toolchain {
-    languageVersion = JavaLanguageVersion.of(11)
+    languageVersion = JavaLanguageVersion.of(21)
   }
 }
 
-mainClassName = 'com.montaury.pokebagarre.Main'
+application {
+  mainClass = 'com.montaury.pokebagarre.Main'
+}
