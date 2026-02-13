@@ -14,3 +14,6 @@ cd PokeBagarre
 ```
 
 ## Run tests
+```sh
+./gradlew test
+```
