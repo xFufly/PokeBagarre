@@ -29,6 +29,13 @@ jobs:
         uses: dorny/test-reporter@v1
         if: success() || failure()
         with:
-            name: JUnit Tests
-            path: build/test-results/test/TEST-*.xml 
-            reporter: java-junit
+          name: JUnit Tests
+          path: build/test-results/test/TEST-*.xml 
+          reporter: java-junit
+        run: |
+          echo "| Outcome | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Code Coverage % | ${{ steps.jacoco_reporter.outputs.coverage_percentage }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| :heavy_check_mark: Number of Lines Covered | ${{ steps.jacoco_reporter.outputs.covered_lines }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| :x: Number of Lines Missed | ${{ steps.jacoco_reporter.outputs.missed_lines }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Total Number of Lines | ${{ steps.jacoco_reporter.outputs.total_lines }} |" >> $GITHUB_STEP_SUMMARY
