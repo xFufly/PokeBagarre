@@ -32,6 +32,7 @@ jobs:
           name: JUnit Tests
           path: build/test-results/test/TEST-*.xml 
           reporter: java-junit
+          minimum_coverage: 100
         run: |
           echo "| Outcome | Value |" >> $GITHUB_STEP_SUMMARY
           echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
