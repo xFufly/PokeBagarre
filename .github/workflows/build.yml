@@ -24,7 +24,7 @@ jobs:
       - name: Make gradlew executable
         run:  chmod +x ./gradlew
       - name: Build & test and compute JaCoCo reports
-        run: ./gradlew build #jacocoTestReport
+        run: ./gradlew build jacocoTestReport
       - name: Rapport de tests
         uses: dorny/test-reporter@v1
         if: success() || failure()
