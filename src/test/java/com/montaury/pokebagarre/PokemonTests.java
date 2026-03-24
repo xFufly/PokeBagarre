@@ -46,7 +46,7 @@ public class PokemonTests {
     }
 
     @Test
-    public void premier_serait_vainqueur_avec_meilleure_défense_et_attaque_égale_au_second() {
+    public void premier_serait_vainqueur_avec_meilleure_defense_et_attaque_egale_au_second() {
         // Given
         Pokemon premier = ConstructeurDePokemon.unPokemon().avecAttaque(10).avecDefense(2).construire();
         Pokemon second = ConstructeurDePokemon.unPokemon().avecAttaque(10).avecDefense(1).construire();
@@ -59,7 +59,7 @@ public class PokemonTests {
     }
 
     @Test
-    public void second_serait_vainqueur_avec_meilleure_défense_et_attaque_égale_au_premier() {
+    public void second_serait_vainqueur_avec_meilleure_defense_et_attaque_egale_au_premier() {
         // Given
         Pokemon premier = ConstructeurDePokemon.unPokemon().avecAttaque(10).avecDefense(1).construire();
         Pokemon second = ConstructeurDePokemon.unPokemon().avecAttaque(10).avecDefense(2).construire();
@@ -72,7 +72,7 @@ public class PokemonTests {
     }
 
     @Test
-    public void premier_serait_vainqueur_avec_attaque_et_défense_égale_au_second() {
+    public void premier_serait_vainqueur_avec_attaque_et_defense_egale_au_second() {
         // Given
         Pokemon premier = ConstructeurDePokemon.unPokemon().avecAttaque(10).avecDefense(2).construire();
         Pokemon second = ConstructeurDePokemon.unPokemon().avecAttaque(10).avecDefense(2).construire();
